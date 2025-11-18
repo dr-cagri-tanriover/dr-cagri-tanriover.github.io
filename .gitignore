@@ -416,3 +416,10 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# User defined ignores
+*.mp4
+Istanbul_ignition_lab_1.jpeg
+Istanbul_ignition_lab_2.jpeg
+# Filmora projects
+*.wfp
