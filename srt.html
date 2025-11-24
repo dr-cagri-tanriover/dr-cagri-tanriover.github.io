@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+
+    html {
+        font-size: 16px;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #222;
+    }
+
+    header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #fff;
+    border-bottom: 5px solid #bc08e9;
+    }
+
+    header2 {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 4rem;
+    background: #fff;
+    border-bottom: 5px solid #bc08e9;
+    }
+
+    #srt_logo {
+    width: 720px;
+    height: 360px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    }
+
+    #work_images {
+        width: 1440px;
+        height: 935px;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    #title {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    }
+
+    #paragraph {
+        text-align: left;
+        max-width: 150rem;
+        margin-top: 20px;
+    }
+
+    #paragraph .subheading {
+        text-align: left;
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    #paragraph .body-text {
+        display : block;  /* put on its own line */
+        text-align: left;
+        font-size: 2.5rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+    <div style="text-align: center; width: 100%;">
+        <img id="srt_logo" src="images/SRT/SRT_logo.png" alt="SRT_LOGO" />
+        <div id="title">
+            ~ About My Work on Encrypted Private Mobile Radios (PMRs) at SRT ~<br/>
+        </div>
+    </div>
+</header>
+
+<header2>
+    <div id="paragraph">
+        <span class="subheading">
+            1 - The Development Platform<br/>
+        </span></br>
+
+        <span class="body-text">
+            The amazing hardware team at SRT created this versatile development platform to test new features and capabilities for our encrypted private mobile radios (PMRs). You will notice the handset test platform not only adheres the form factor of a handheld radio, but it can also be detached from the platform and be used in a real world handset when needed! This platform allows us to simulate various real-world scenarios, ensuring that our radios perform optimally under different conditions. The encryption hardware was an external board that plugged into the handset platform as shown below. My role involved developing and integrating the air interface as well as the end-to-end encryption functions with this hardware, as well as full standalone and network testing of all the encryption features. This platform has been instrumental in accelerating our development process and enhancing the reliability of our PMRs.
+        </span></br>
+        <img id="work_images" src="images/SRT/handset_development_platform_ANNOT.jpg" alt="DEV_PLAT" />
+    </div>
+</header2>
+
+
+<header2>
+    <div id="paragraph">
+        <span class="subheading">
+            2 - Testing a Group Call<br/>
+        </span></br>
+
+        <span class="body-text">
+            Me and my team performed thorough testing of group call functionalities using multiple development platforms. This involved setting up various scenarios to ensure seamless communication between different radios in a group call setting. One of the most critical tests was an encrypted group call where two radios (i.e., Handset 1 and 2 as shown below) are equipped with the encryption hardware, and share a common encryption key while the third radio (i.e., Handset 3) is on the same channel as the other two, but has no encryption capability. When a group voice call is initiated by Handset 1 or 2, the audio is encrypted and can only be decrypted by the other handset with the correct encryption key. Handset 3, lacking the encryption hardware and key, is unable to decode the audio, resulting in unintelligible noise. However, when Handset 3 initiates a group call on the same channel, all three handsets can hear the audio clearly since it is transmitted in plaintext. This test was crucial in validating the effectiveness of our encryption implementation and ensuring secure communication within the group.
+        </span></br>
+        <img id="work_images" src="images/SRT/multiple_platforms_ANNOT.jpg" alt="DEV_PLAT" />
+    </div>
+</header2>
+
+
+<header2>
+    <div id="paragraph">
+        <span class="subheading">
+            3 - Testing Timing and Synchronization<br/>
+        </span></br>
+
+        <span class="body-text">
+            Besides functional testing, I was also responsible for ensuring that the encryption related timing and synchronization aspects of our encrypted PMRs were functioning correctly. This involved rigorous testing to verify that the encryption and decryption processes were synchronized across different devices, ensuring that there were no delays or mismatches in communication. One important test for mission critical radios is to ensure a voice call is set up within less than 250 milliseconds even with any encryption overhead (i.e., getting the correct encryption master key, generating the correct derived session key and initializing the algorithm to start encrypting audio) Proper timing is crucial in encrypted communications to prevent data loss and ensure that messages are received accurately and promptly. Through a series of tests using our development platforms, we were able to fine-tune the timing mechanisms, resulting in a robust and reliable encryption system that meets the high standards required for secure private mobile radio communications.
+        </span></br>
+        <img id="work_images" src="images/SRT/test_and_verification_ANNOT.jpg" alt="DEV_PLAT" />
+    </div>
+</header2>
+
+
+<header2>
+    <div id="paragraph">
+        <span class="subheading">
+            4 - Field Ready Radios<br/>
+        </span></br>
+
+        <span class="body-text">
+            After extensive development and rigorous testing using our development platforms, the final step is to integrate the encryption features into our field-ready private mobile radios. These radios are designed for real-world use, equipped with robust hardware and user-friendly interfaces to ensure reliable communication in various environments. Radios used on the field look very different to the ones we use on the bench during development and testing (see the two field radios below) My role involved ensuring that the encryption functionalities were seamlessly integrated into these radios without compromising performance or usability. When the tested handset boards are placed in the enclosure, the final testing can reveal  mechanical issues (e.g., press to talk button may malfunction) as well as thermal issues (e.g., radio response time can get longer or the radio may become unresponsive) Therefore, conducting final tests to validate radio performance in real-world scenarios is equally important as developing and testing the encryption algorithms on the development platform.
+        </span></br>
+        <img id="work_images" src="images/SRT/complete_radios_ANNOT.jpg" alt="DEV_PLAT" />
+    </div>
+</header2>
