@@ -416,3 +416,13 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# User defined ignores
+*.mp4
+images/Istanbul_ignition_lab_1.jpeg
+images/Istanbul_ignition_lab_2.jpeg
+images/TheCitizen_Telemed_Article_Dec_2002.jpg
+images/Daily_Express_Telemedicine_article_Jan_2002.jpg
+images/SRT/originals
+# Filmora projects
+*.wfp
