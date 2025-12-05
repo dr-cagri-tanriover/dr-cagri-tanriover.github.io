@@ -4,40 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    html {
+      font-size: 100%;              /* typically 16px */
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f9f9f9;
+      color: #222;
+    }
 
     header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background: #fff;
+      padding: 2rem 1rem;
+      background: #fff;
+      border-bottom: 5px solid #bc08e9;   /* same accent as other pages */
+    }
+
+    .content-inner {
+      max-width: 60rem;             /* ~960px */
+      margin: 0 auto;
+      text-align: center;
     }
 
     #title {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-bottom: 4rem;
+      font-size: 2rem;              /* ~32px, consistent with other titles */
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    #subtitle {
+      font-size: 1rem;              /* normal body size */
+      font-weight: normal;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
     }
 
     #breakout_image {
-    width: 2160px;
-    height: 1440px;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+      width: 100%;                  /* responsive image */
+      max-width: 50rem;             /* ~800px on large screens */
+      height: auto;                 /* keep aspect ratio */
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 1rem auto;
     }
   </style>
 </head>
+<body>
 
-<header>
-    <div style="text-align: center; width: 100%;">
-        <div id="title">
-            ~ World's First Intel Edison Breakout Board ~<br/>
-            The Intel Edison sits on this breakout board, which gives easy access to IO pins and battery power delivery and management.<br/>
-        </div>
-        <img id="breakout_image" src="images/Intel_Edison_Breakout.jpg" alt="EDISON_BREAKOUT" />
+  <header>
+    <div class="content-inner">
+      <div id="title">
+        ~ World's First Intel Edison Breakout Board ~
+      </div>
+      <div id="subtitle">
+        The Intel Edison sits on this breakout board, which gives easy access to IO pins and
+        battery power delivery and management.
+      </div>
+      <img
+        id="breakout_image"
+        src="images/Intel_Edison_Breakout.jpg"
+        alt="EDISON_BREAKOUT"
+      />
     </div>
+  </header>
 
-</header>
-
-  
+</body>
+</html>

@@ -4,39 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    html {
+      font-size: 100%;              /* usually 16px */
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f9f9f9;
+      color: #222;
+    }
 
     header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background: #fff;
+      padding: 2rem 1rem;
+      background: #fff;
+      border-bottom: 5px solid #bc08e9;   /* same accent as other pages */
+    }
+
+    .content-inner {
+      max-width: 60rem;             /* ~960px, keeps content nicely centered */
+      margin: 0 auto;
+      text-align: center;
     }
 
     #title {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+      font-size: 2rem;              /* ~32px, consistent with other titles */
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
     }
 
     #brandbook_anim_gif {
-    width: 1080px;
-    height: 720px;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+      width: 100%;                  /* responsive width */
+      max-width: 40rem;             /* ~640px wide on large screens */
+      height: auto;                 /* keep aspect ratio of the GIF */
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 1rem auto;
     }
   </style>
 </head>
+<body>
 
-<header>
-    <div style="text-align: center; width: 100%;">
-        <div id="title">
-            ~ The Butterfly Dress Appeared in Intel 2016 Brand Book ~
-        </div>
-        <img id="brandbook_anim_gif" src="images/Brandbook_gif_clip.gif" alt="BRANDBOOK" />
+  <header>
+    <div class="content-inner">
+      <div id="title">
+        ~ The Butterfly Dress Appeared in Intel 2016 Brand Book ~
+      </div>
+      <img
+        id="brandbook_anim_gif"
+        src="images/Brandbook_gif_clip.gif"
+        alt="BRANDBOOK"
+      />
     </div>
+  </header>
 
-</header>
-
-  
+</body>
+</html>

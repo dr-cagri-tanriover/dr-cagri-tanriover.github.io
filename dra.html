@@ -4,28 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    html {
+      font-size: 100%;              /* typically 16px */
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f9f9f9;
+      color: #222;
+    }
 
     header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background: #fff;
+      padding: 2rem 1rem;
+      background: #fff;
+      border-bottom: 5px solid #bc08e9;   /* same accent as other pages */
+    }
+
+    .content-inner {
+      max-width: 60rem;             /* ~960px */
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #title {
+      font-size: 2rem;              /* ~32px, consistent with other titles */
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    
+    #subtitle {
+      font-size: 1rem;              /* normal body size */
+      font-weight: normal;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
     }
 
     #dra_image {
-    width: 2725px;
-    height: 1984px;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+      width: 100%;                  /* responsive image */
+      max-width: 50rem;             /* ~800px on large screens */
+      height: auto;                 /* keep aspect ratio */
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 1rem auto;
     }
   </style>
 </head>
+<body>
 
-<header>
-    <div style="text-align: center; width: 100%;">
-        <img id="dra_image" src="images/IL_DRA.jpg" alt="DRA" />
+  <header>
+    <div class="content-inner">
+      <div id="title">
+        ~ My Division Recognition Award (DRA) from Intel Labs ~
+      </div>
+
+      <div id="subtitle">
+        I was honored to receive a Division Recognition Award (DRA) from Intel Labs <i>(delivered quarterly to ~20 outstanding researchers among a total of 800)</i> for my contributions to edge computing and IoT research during my time at Intel. The DRA is given to individuals who have made significant impacts in their respective fields, and I am proud to have been recognized by my peers and leadership at Intel Labs.
+      </div>
+
+      <img
+        id="dra_image"
+        src="images/IL_DRA.jpg"
+        alt="DRA"
+      />
     </div>
-</header>
+  </header>
 
-  
+</body>
+</html>

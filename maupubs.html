@@ -6,69 +6,80 @@
   <style>
 
     html {
-        font-size: 20px;
+    font-size: 100%; /* typically 16px */
     }
+
+    body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    }
+
+    /* Top header -------------------------------------------------- */
 
     header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
     background: #fff;
     border-bottom: 5px solid #bc08e9;
     }
-
-    header2 {
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    padding: 4rem;
-    background: #fff;
-    border-bottom: 5px solid #bc08e9;
-    }
-    
 
     #har_image {
-    width: 25rem;
-    height: 25rem;
+    width: 12rem;                /* ~192px at 16px base */
+    height: 12rem;
     border-radius: 8px;
     margin-bottom: 1rem;
     }
 
-    ul.publications li {
-        margin-bottom: 16px; /* Adjust this value as needed */
-        font-size: 3rem;
-    }
-
     #title {
-    font-size: 4.5rem;
+    font-size: 1.8rem;             /* ~32px */
     font-weight: bold;
-    margin-top: 4rem;
+    margin-top: 1.5rem;
+    text-align: center;
     }
 
-    #paragraph {
-        text-align: left;
-        max-width: 300rem;
-        margin-top: 20px;
+    /* Content sections -------------------------------------------- */
+
+    .content-section {
+    display: block;              /* replaces your header2 */
+    padding: 2rem 1.5rem;
+    background: #fff;
+    border-bottom: 5px solid #bc08e9;
     }
 
-    #paragraph .subheading {
-        text-align: left;
-        font-size: 4rem;
-        font-weight: bold;
-        margin-bottom: 10px;
+    /* Limit line width so it doesn't feel huge on wide screens */
+    .content-inner {
+    max-width: 60rem;            /* ~960px */
+    margin: 0 auto;
     }
 
-    #paragraph .body-text {
-        display : block;  /* put on its own line */
-        text-align: left;
-        font-size: 2.5rem;
-        line-height: 1.6;
-        margin-bottom: 20px;
+    /* Headings and lists ------------------------------------------ */
+
+    .subheading {
+    font-size: 1.5rem;           /* ~24px */
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    }
+
+    /* List items (publications / patents) */
+    ul.publications {
+    padding-left: 1.5rem;
+    margin-top: 0;
+    }
+
+    ul.publications li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;             /* ~16px, normal body text */
+    line-height: 1.6;
     }
 
   </style>
 </head>
+
+
 <body>
 
 <header>
@@ -80,8 +91,8 @@
     </div>
 </header>
 
-<header2>
-    <div id="paragraph">
+<div class="content-section">
+    <div class="content-inner">
         <span class="subheading">
             Peer Reviewed Publications<br/>
         </span></br>
@@ -146,11 +157,11 @@
 
         </ul>
     </div>
-</header2>
+</div>
 
 
-<header2>
-    <div id="paragraph">
+<div class="content-section">
+  <div class="content-inner">
         <span class="subheading">
             Patents<br/>
         </span></br>
@@ -190,4 +201,4 @@
 
         </ul>
     </div>
-</header2>
+</div>

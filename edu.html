@@ -4,255 +4,288 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-
     html {
-        font-size: 20px;
+      font-size: 100%;              /* typically 16px */
     }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f9f9f9;
+      color: #222;
+    }
+
+    /* Top header: image + title ------------------------------------- */
 
     header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background: #fff;
-    border-bottom: 5px solid #bc08e9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+      background: #fff;
+      border-bottom: 5px solid #bc08e9;
     }
-
-    header2 {
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    padding: 4rem;
-    background: #fff;
-    border-bottom: 5px solid #bc08e9;
-    }
-    
 
     #har_image {
-    width: 20rem;
-    height: 12rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    }
-
-    ul.publications li {
-        margin-bottom: 16px; /* Adjust this value as needed */
-        font-size: 5rem;
-    }
-
-    ul.publications li ul li{
-        list-style-type: square;   /* or square, disc, etc. */
-        margin-left: 4rem;         /* adjust indentation if needed */
-        font-size: 4rem;
+      width: 12rem;                 /* ~192px */
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
     #title {
-    font-size: 8rem;
-    font-weight: bold;
-    margin-top: 4rem;
+      font-size: 2rem;              /* ~32px */
+      font-weight: bold;
+      margin-top: 1.5rem;
+      text-align: center;
     }
 
-    #paragraph {
-        text-align: left;
-        max-width: 300rem;
-        margin-top: 20px;
+    /* Content sections ---------------------------------------------- */
+
+    .content-section {
+      padding: 2rem 1.5rem;
+      background: #fff;
+      border-bottom: 5px solid #bc08e9;
     }
 
-    #paragraph .subheading {
-        text-align: left;
-        font-size: 6rem;
-        font-weight: bold;
-        margin-bottom: 10px;
+    .content-inner {
+      max-width: 60rem;             /* ~960px */
+      margin: 0 auto;
+      text-align: left;
     }
 
-    #paragraph .body-text {
-        display : block;  /* put on its own line */
-        text-align: left;
-        font-size: 2.5rem;
-        line-height: 1.6;
-        margin-bottom: 20px;
+    .subheading {
+      font-size: 1.4rem;            /* heading for each degree */
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      display: block;
     }
 
+    ul.publications {
+      padding-left: 1.5rem;
+      margin: 0;
+      list-style-type: disc;
+    }
+
+    ul.publications li {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;              /* normal body size */
+      line-height: 1.6;
+    }
+
+    /* Nested publication list under "Publications:" */
+    ul.publications li ul {
+      list-style-type: circle;
+      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+    }
+
+    ul.publications li ul li {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
 
-<header>
+  <!-- HEADER: Education title + illustration ------------------------ -->
+  <header>
     <div style="text-align: center; width: 100%;">
-        <img id="har_image" src="images/uni_degrees_illus.png" alt="HAR" />
-        <div id="title">
-            ~ Cagri Tanriover's Education ~<br/>
-        </div>
+      <img id="har_image" src="images/uni_degrees_illus.png" alt="Education illustration" />
+      <div id="title">
+        ~ Cagri Tanriover's Education ~<br/>
+      </div>
     </div>
-</header>
+  </header>
 
-<header2>
-    <div id="paragraph">
-        <span class="subheading">
-            Doctoral Degree (PhD), Lancaster University - United Kingdom  - [October 1998, February 2002] <br/>
-        </span></br>
+  <!-- PhD ----------------------------------------------------------- -->
+  <div class="content-section">
+    <div class="content-inner">
+      <span class="subheading">
+        Doctoral Degree (PhD), Lancaster University – United Kingdom  – [October 1998, February 2002]
+      </span>
 
-        <ul class="publications">
+      <ul class="publications">
+        <li>
+          <b>Synopsis:</b> I received my PhD in Communications Systems and my research was in Turbo Codes, which are a class of
+          channel capacity–approaching error correction codes. My focus was on improving the architecture of this class of codes,
+          and to demonstrate how architectural enhancements yielded practical improvements in applications such as compressed
+          still image transmission over noisy wireless channels. As the key output of my research, I invented the new
+          "Multifold Turbo Coding" technique – in collaboration with Dr Shu Lin and his team – that improved the bit and frame
+          error rate of the state-of-the-art turbo codes. I also published several peer-reviewed journal and conference papers
+          as listed below.
+        </li>
+
+        <li>
+          <b>Publications:</b>
+          <ul>
             <li>
-                <b>Synopsis:</b> I received my PhD in Communications Systems and my research was in Turbo Codes, which are a class of channel capacity approaching error correction codes. My focus was on improving the architecture of this class of codes, and to demonstrate how arcitectural enhancements yielded practical improvements in applications such as compressed still image transmission over noisy wireless channels. As the key output of my research, I invented the new "Multifold Turbo Coding" technique - in collaboration with Dr Shu Lin and his team - that improved the bit and frame error rate of the state-of-the-art turbo codes. I also published several peer-revieweed journal and conference papers as listed below.
+              D. Tarchi, R. Fantacci, <b>C. Tanriover</b>, and B. Honary,
+              <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/dac.984" target="_blank">
+                "Novel link adaptation for TETRA cellular systems,"
+              </a>
+              International Journal of Communication Systems, vol. 22, no. 4, pp. 483-501, Apr. 2009.
             </li>
 
             <li>
-                <b>Publications:</b>
-                    <ul class="publications">
-
-                        <li>
-                            D. Tarchi, R. Fantacci, <b>C. Tanriover</b>, and B. Honary,
-                            <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/dac.984" target="_blank">
-                            "Novel link adaptation for TETRA cellular systems,"
-                            </a>
-                            International Journal of Communication Systems, vol. 22, no. 4, pp. 483-501, Apr. 2009. 
-                        </li>
-
-                        <li>
-                            <b>C. Tanriover</b> and B. Honary. (2005)
-                            <a href="https://link.springer.com/chapter/10.1007/0-387-22928-0_7"_blank">
-                            "Unequal Two-Fold Turbo Codes."
-                            </a>
-                            In: Wysocki, T.A., Honary, B., Wysocki, B.J. (eds) Signal Processing for Telecommunications and Multimedia. Multimedia Systems and Applications Series, vol 27. Springer, Boston, MA. https://doi.org/10.1007/0-387-22928-0_7
-                        </li>
-
-
-                        <li>
-                            V. Zarimpas, B. Honary, D. Lund, <b>C. Tanriover</b> and N. Thanopoulos, 
-                            <a href="https://ieeexplore.ieee.org/abstract/document/4222781" target="_blank">
-                            "Location Determination and Tracking Using Radio Beacons,"
-                            </a>
-                            2005 6th IEE International Conference on 3G and Beyond, Washington, DC, USA, 2005, pp. 1-5.
-                        </li>
-
-                        <li>
-                            <b>C. Tanriover</b> and B. Honary, 
-                            <a href="https://ieeexplore.ieee.org/abstract/document/1249073 target="_blank">
-                            "Image transmission using unequal error protection combined with two-fold turbo coding,"
-                            </a>
-                            SympoTIC03. Joint 1st Workshop on Mobile Future and Symposium on Trends in Communications, Bratislava, Slovakia, 2003, pp. i-v, doi: 10.1109/TIC.2003.1249073.
-                        </li>
-
-                        <li>
-                            <b>C.C. Tanriover</b> and B. Honary, 
-                            <a href="https://ieeexplore.ieee.org/abstract/document/1040498"_blank">
-                            "Crossover codeword algorithm for iteration control,"
-                            </a>
-                            Proceedings IEEE 56th Vehicular Technology Conference, Vancouver, BC, Canada, 2002, pp. 1662-1665 vol.3, doi: 10.1109/VETECF.2002.1040498.
-                        </li>
-
-
-                        <li>
-                            <b>C. Tanriover</b>, B. Honary, Jun Xu and Shu Lin, 
-                            <a href="https://ieeexplore.ieee.org/abstract/document/1001661" target="_blank">
-                            "Improving turbo code error performance by multifold coding,"
-                            </a>
-                            in IEEE Communications Letters, vol. 6, no. 5, pp. 193-195, May 2002, doi: 10.1109/4234.1001661.
-                        </li>
-
-                        <li>
-                            <b>C. Tanriover</b>, Jun Xu, Shu Lin, B. Honary, 
-                            <a href="https://ieeexplore.ieee.org/abstract/document/936008" target="_blank">
-                            "Multifold turbo codes,"
-                            </a>
-                            Proc. ISIT 01, Washington D.C., USA, June 2001, p 145.
-                        </li>
-
-                        <li>
-                            Coulton, Paul, <b>Tanriover, Cagri</b>, Wright, B., Honary, B.. (2000)
-                            <a href="https://digital-library.theiet.org/doi/10.1049/el%3A20001237" target="_blank">
-                            "Simple hybrid type II ARQ technique using soft output information."
-                            </a>
-                            Electronics Letters. 36. 1716 - 1717. 10.1049/el:20001237. 
-                        </li>
-
-                        <li>
-                            <b>Tanriover, C.</b>, Chippendale, P., Honary, B. (1999).
-                            <a href="https://ieeexplore.ieee.org/abstract/document/829874" target="_blank">
-                            "Turbo code application to image transmission,"
-                            </a>
-                            IEE Colloquium on Turbo Codes in Digital Broadcasting - Could It Double Capacity? (Ref. No. 1999/165), London, UK, 1999, pp. 17/1-17/6, doi: 10.1049/ic:19990797. 
-                        </li>
-
-                        <li>
-                            Chippendale, P., <b>Tanriover, C.</b>, Honary, B. (1999).
-                            <a href="https://link.springer.com/chapter/10.1007/3-540-46665-7_10" target="_blank">
-                            "Enhanced Image Coding for Noisy Channels."
-                            </a>
-                            Cryptography and Coding. Cryptography and Coding 1999. Lecture Notes in Computer Science, vol 1746. Springer, Berlin, Heidelberg. https://doi.org/10.1007/3-540-46665-7_10 
-                        </li>
-
-                    </ul>
+              <b>C. Tanriover</b> and B. Honary. (2005)
+              <a href="https://link.springer.com/chapter/10.1007/0-387-22928-0_7" target="_blank">
+                "Unequal Two-Fold Turbo Codes."
+              </a>
+              In: Wysocki, T.A., Honary, B., Wysocki, B.J. (eds) Signal Processing for Telecommunications and Multimedia.
+              Multimedia Systems and Applications Series, vol 27. Springer, Boston, MA. https://doi.org/10.1007/0-387-22928-0_7
             </li>
 
             <li>
-                <a href="pdfs/PhD_Thesis.pdf" target="_blank">
-                ~ View my PhD thesis here ~
-                </a>
+              V. Zarimpas, B. Honary, D. Lund, <b>C. Tanriover</b> and N. Thanopoulos,
+              <a href="https://ieeexplore.ieee.org/abstract/document/4222781" target="_blank">
+                "Location Determination and Tracking Using Radio Beacons,"
+              </a>
+              2005 6th IEE International Conference on 3G and Beyond, Washington, DC, USA, 2005, pp. 1-5.
             </li>
 
-        </ul>
+            <li>
+              <b>C. Tanriover</b> and B. Honary,
+              <a href="https://ieeexplore.ieee.org/abstract/document/1249073" target="_blank">
+                "Image transmission using unequal error protection combined with two-fold turbo coding,"
+              </a>
+              SympoTIC03. Joint 1st Workshop on Mobile Future and Symposium on Trends in Communications, Bratislava, Slovakia,
+              2003, pp. i-v, doi: 10.1109/TIC.2003.1249073.
+            </li>
+
+            <li>
+              <b>C.C. Tanriover</b> and B. Honary,
+              <a href="https://ieeexplore.ieee.org/abstract/document/1040498" target="_blank">
+                "Crossover codeword algorithm for iteration control,"
+              </a>
+              Proceedings IEEE 56th Vehicular Technology Conference, Vancouver, BC, Canada, 2002, pp. 1662-1665 vol.3,
+              doi: 10.1109/VETECF.2002.1040498.
+            </li>
+
+            <li>
+              <b>C. Tanriover</b>, B. Honary, Jun Xu and Shu Lin,
+              <a href="https://ieeexplore.ieee.org/abstract/document/1001661" target="_blank">
+                "Improving turbo code error performance by multifold coding,"
+              </a>
+              in IEEE Communications Letters, vol. 6, no. 5, pp. 193-195, May 2002, doi: 10.1109/4234.1001661.
+            </li>
+
+            <li>
+              <b>C. Tanriover</b>, Jun Xu, Shu Lin, B. Honary,
+              <a href="https://ieeexplore.ieee.org/abstract/document/936008" target="_blank">
+                "Multifold turbo codes,"
+              </a>
+              Proc. ISIT 01, Washington D.C., USA, June 2001, p 145.
+            </li>
+
+            <li>
+              Coulton, Paul, <b>Tanriover, Cagri</b>, Wright, B., Honary, B. (2000)
+              <a href="https://digital-library.theiet.org/doi/10.1049/el%3A20001237" target="_blank">
+                "Simple hybrid type II ARQ technique using soft output information."
+              </a>
+              Electronics Letters. 36. 1716 - 1717. 10.1049/el:20001237.
+            </li>
+
+            <li>
+              <b>Tanriover, C.</b>, Chippendale, P., Honary, B. (1999).
+              <a href="https://ieeexplore.ieee.org/abstract/document/829874" target="_blank">
+                "Turbo code application to image transmission,"
+              </a>
+              IEE Colloquium on Turbo Codes in Digital Broadcasting - Could It Double Capacity?
+              (Ref. No. 1999/165), London, UK, 1999, pp. 17/1-17/6, doi: 10.1049/ic:19990797.
+            </li>
+
+            <li>
+              Chippendale, P., <b>Tanriover, C.</b>, Honary, B. (1999).
+              <a href="https://link.springer.com/chapter/10.1007/3-540-46665-7_10" target="_blank">
+                "Enhanced Image Coding for Noisy Channels."
+              </a>
+              Cryptography and Coding. Cryptography and Coding 1999. Lecture Notes in Computer Science, vol 1746.
+              Springer, Berlin, Heidelberg. https://doi.org/10.1007/3-540-46665-7_10
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="pdfs/PhD_Thesis.pdf" target="_blank">
+            ~ View my PhD thesis here ~
+          </a>
+        </li>
+      </ul>
     </div>
-</header2>
+  </div>
 
+  <!-- MSc ------------------------------------------------------------ -->
+  <div class="content-section">
+    <div class="content-inner">
+      <span class="subheading">
+        Masters Degree (MSc), Lancaster University – United Kingdom  – [October 1997, May 1998]
+      </span>
 
-<header2>
-    <div id="paragraph">
-        <span class="subheading">
-            Masters Degree (MSc), Lancaster University - United Kingdom  - [October 1997, May 1998]<br/>
-        </span></br>
+      <ul class="publications">
+        <li>
+          <b>Synopsis:</b> I received my MSc in "Digital Signal Processing Applications in Communication Systems", which I
+          completed with distinction. My thesis was on the exploration of how quantization affected the bit error rate of
+          Turbo codes – a class of channel capacity–approaching error correction codes invented in 1993. Besides providing
+          a quantitative analysis of the quantization effects, I also simulated still image transmission over noisy wireless
+          channels to demonstrate the visual impact of channel errors and quantization. My MSc work laid the foundation for
+          my later PhD research in the same field.
+        </li>
 
-        <ul class="publications">
-            <li>
-                <b>Synopsis:</b> I received my MSc in "Digital Signal Processing Applications in Communication Systems", which I completed with distinction. My thesis was on the exploration of how quantization affected the bit error rate of Turbo codes - a class of channel capacity approaching error correction codes invented in 1993. Besides providing a quantitative analysis of the quantization effects, I also simulated still image transmission over noisy wireless channels to demonstrate the visual impact of channel errors and quantization. My MSC work laid the foundation for my later PhD research in the same field. 
-            </li>
-
-            <li>
-                <a href="pdfs/MSc_Thesis.pdf" target="_blank">
-                ~ View my MSc thesis here ~
-                </a>
-            </li>
-
-        </ul>
+        <li>
+          <a href="pdfs/MSc_Thesis.pdf" target="_blank">
+            ~ View my MSc thesis here ~
+          </a>
+        </li>
+      </ul>
     </div>
-</header2>
+  </div>
 
-<header2>
-    <div id="paragraph">
-        <span class="subheading">
-            Bachelor of Science Degree (BSc), Istanbul Technical University (ITU) - Turkey  - [October 1993, June 1997]<br/>
-        </span></br>
+  <!-- BSc ------------------------------------------------------------ -->
+  <div class="content-section">
+    <div class="content-inner">
+      <span class="subheading">
+        Bachelor of Science Degree (BSc), Istanbul Technical University (ITU) – Turkey  – [October 1993, June 1997]
+      </span>
 
-        <ul class="publications">
-            <li>
-                <b>Synopsis:</b> I received my BSc in "Electronics and Telecommunications Engineering" in Turkey. During my final year, I completed a capstone project focused on the design and implementation of digital filters using an ordinary microcontroller rather than a digital signal processor, and studied the limitations of this approach. 
-            </li>
-
-        </ul>
+      <ul class="publications">
+        <li>
+          <b>Synopsis:</b> I received my BSc in "Electronics and Telecommunications Engineering" in Turkey. During my final
+          year, I completed a capstone project focused on the design and implementation of digital filters using an ordinary
+          microcontroller rather than a digital signal processor, and studied the limitations of this approach.
+        </li>
+      </ul>
     </div>
-</header2>
+  </div>
 
-<header2>
-    <div id="paragraph">
-        <span class="subheading">
-            International Baccalaureate (IB), United World College USA (UWC-USA) - NM, USA  - [August 1990, May 1992]<br/>
-        </span></br>
+  <!-- IB ------------------------------------------------------------- -->
+  <div class="content-section">
+    <div class="content-inner">
+      <span class="subheading">
+        International Baccalaureate (IB), United World College USA (UWC-USA) – NM, USA  – [August 1990, May 1992]
+      </span>
 
-        <ul class="publications">
-            <li>
-                <b>Synopsis:</b> I have an IB diploma from UWC-USA, which is one of the 18 international schools worldwide that are part of the 
-                <a href="https://www.uwc.org/" target="_blank">
-                United World Colleges
-                </a> movement. Each UWC school accepts 100 students per year, and each student has to be approved by his/her country's national committee to qualify. UWC-USA is known for its rigorous academic curriculum and its emphasis on intercultural understanding, community service, and leadership development. My time at UWC-USA was transformative, as it exposed me to a diverse community of students from around the world and shaped me into the person I am today.
-            </li>
+      <ul class="publications">
+        <li>
+          <b>Synopsis:</b> I have an IB diploma from UWC-USA, which is one of the 18 international schools worldwide that are
+          part of the
+          <a href="https://www.uwc.org/" target="_blank">
+            United World Colleges
+          </a> movement. Each UWC school accepts 100 students per year, and each student has to be approved by his/her country's
+          national committee to qualify. UWC-USA is known for its rigorous academic curriculum and its emphasis on intercultural
+          understanding, community service, and leadership development. My time at UWC-USA was transformative, as it exposed me
+          to a diverse community of students from around the world and shaped me into the person I am today.
+        </li>
 
-            <li>
-                <a href="https://www.uwc-usa.org/" target="_blank">
-                ~ More on UWC-USA here ~
-                </a>
-            </li>
-
-        </ul>
+        <li>
+          <a href="https://www.uwc-usa.org/" target="_blank">
+            ~ More on UWC-USA here ~
+          </a>
+        </li>
+      </ul>
     </div>
-</header2>
+  </div>
+
+</body>
+</html>
